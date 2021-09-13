@@ -6,5 +6,5 @@ import { Component } from "@angular/core";
 })
 
 export class BodyComponent {
-
+    title:string= "Wikipedia"
 }
