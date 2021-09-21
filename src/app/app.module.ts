@@ -8,6 +8,11 @@ import { FooterComponent } from './footer/footer.component';
 import { TopBarComponent } from './header/top-bar.component';
 import { layoutComponent } from './Layout/layout.component';
 import { SidebarComponent } from './sidebar/sidedar.component';
+import { AppRoutingModule } from './app-routing.module';
+import { HomeSource } from './body/Home-source.component';
+import { HomeHistory } from './body/Home-History.component';
+import { Talk } from './body/Talk-Read.component';
+import { TalkSource } from './body/Talk-source.component';
 
 @NgModule({
   declarations: [
@@ -17,10 +22,15 @@ import { SidebarComponent } from './sidebar/sidedar.component';
     SidebarComponent,
     BodyComponent,
     layoutComponent,
-    InfoBodyComponent
+    InfoBodyComponent,
+    HomeSource, 
+    HomeHistory,
+    Talk,
+    TalkSource,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

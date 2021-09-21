@@ -7,4 +7,5 @@ import { Component } from "@angular/core";
 
 export class BodyComponent {
     title:string= "Wikipedia"
+    artCnt:string= "6,370,883"
 }
