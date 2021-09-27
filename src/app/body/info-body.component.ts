@@ -1,4 +1,6 @@
 import { Component } from "@angular/core";
+import { BodyCardComponent } from "./Body-card.component";
+import { mock_card } from "./mock_card";
 
 @Component({
     selector: 'info-body', 
@@ -6,5 +8,11 @@ import { Component } from "@angular/core";
 })
 
 export class InfoBodyComponent {
-    title:string= "Wikipedia"
+    BodyCards:BodyCardComponent[] = []; 
+
+    constructor(){
+        for (var charType of mock_card){
+            this.BodyCards.push(new BodyCardComponent(charType));
+        }
+    }
 }

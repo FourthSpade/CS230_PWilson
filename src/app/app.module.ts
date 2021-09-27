@@ -13,6 +13,7 @@ import { HomeSource } from './body/Home-source.component';
 import { HomeHistory } from './body/Home-History.component';
 import { Talk } from './body/Talk-Read.component';
 import { TalkSource } from './body/Talk-source.component';
+import { BodyCardComponent } from './body/Body-card.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { TalkSource } from './body/Talk-source.component';
     HomeHistory,
     Talk,
     TalkSource,
+    BodyCardComponent, 
   ],
   imports: [
     BrowserModule,

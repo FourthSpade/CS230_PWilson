@@ -4,22 +4,9 @@
             <div class="container mt-1 mb-1" style="background-color: #b8f7d1">
                 <a>From today's featured article</a>
             </div>
-            <div class="container mt-1 mb-1" style="background-color: #b8f7d1">
-                <a>Did you know...</a>
+            <div *ngFor="let BodyCard of BodyCards">
+                <body-card header={{BodyCard.header}} Text={{BodyCard.Text}} imagePath={{BodyCard.imagePath}}></body-card>
             </div>
-            <a class="ms-auto">
-                <img id="image" src="./assets/Portrait_of_Maungwudaus.jpg.webp" alt="Image of Maungwudaus">
-            </a>
-            <ul>
-                <li>... that when it was sold in 2002, a painting of the Ojibwe performer Maungwudaus (pictured) was the second-most expensive artwork ever sold in Canada?</li>
-                <li>... that Peter Fleischmann directed the cult film The Hamburg Syndrome, which foresaw a scenario similar to the COVID-19 pandemic as early as 1979?</li>
-                <li>... that distance education in Chicago Public Schools in 1937 took place via radio broadcasts during school closures that were spurred by a polio outbreak?</li>
-                <li>... that a review by Alan Blyth of tenor Christoph Strehl's performances described him as singing "with a Wunderlich-like strength and beauty"?</li>
-                <li>... that South Carolina's first television station, WCOS-TV, "could not stand the economic gaff" and folded less than three years after starting up?</li>
-                <li>... that in terms of performance, wool has been advertised as a "miracle fabric"?</li>
-                <li>... that Wayward Son was described as "a delirious candy-coated romp"?</li>
-                <li>... that due to a left–right mix-up, Barry Joule destroyed the wrong Francis Bacon painting, which would now be worth around £35 million?</li>
-            </ul>
         </div>
         <div class="col-5 ps-1" style="background-color: #e7eff7">
             <div class="container mt-1 mb-1" style="background-color: #a8c4ff">
