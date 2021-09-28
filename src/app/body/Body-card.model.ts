@@ -1,4 +1,4 @@
-export class BodyCardComponent {
+export class BodyModelComponent {
     header:string; 
     Text:string; 
     imagePath:string;  

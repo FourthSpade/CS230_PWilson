@@ -6,7 +6,7 @@ export const mock_card = [
     },
     {
         header: "Did you know....",
-        Text:  "Lots of text goes here... Yay!!!!",
+        Text:  "More Text!",
         imagePath: "./assets/Portrait_of_Maungwudaus.jpg.webp",
     }
 ]

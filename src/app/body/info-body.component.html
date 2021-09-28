@@ -1,38 +1,14 @@
 <div class="container mt-1" style="font-family: sans-serif;">
     <div class="row">
         <div class="col-7" style="background-color: #e9f8ef">
-            <div class="container mt-1 mb-1" style="background-color: #b8f7d1">
-                <a>From today's featured article</a>
-            </div>
             <div *ngFor="let BodyCard of BodyCards">
                 <body-card header={{BodyCard.header}} Text={{BodyCard.Text}} imagePath={{BodyCard.imagePath}}></body-card>
             </div>
         </div>
         <div class="col-5 ps-1" style="background-color: #e7eff7">
-            <div class="container mt-1 mb-1" style="background-color: #a8c4ff">
-                <a>In the news</a>
+            <div *ngFor="let BodyCard of BodyCards">
+                <body-card header={{BodyCard.header}} Text={{BodyCard.Text}} imagePath={{BodyCard.imagePath}}></body-card>
             </div>
-            <a>
-                <img id="image" src="./assets/tennis-gal.jpg.webp" alt="Image of Maungwudaus">
-            </a>
-            <ul>
-                <li>British tennis player Emma Raducanu (pictured) wins the US Open, becoming the first qualifier to win a Grand Slam title.</li>
-                <li>The National Rally of Independents, led by Aziz Akhannouch wins the most seats in the Moroccan general election.</li>
-                <li>A prison fire in Tangerang, Indonesia, kills at least 46 inmates and injures 75 others.</li>
-                <li>Carlos Vila Nova is elected President of São Tomé and Príncipe.</li>
-            </ul>
-            <div class="container mt-1 mb-1" style="background-color: #a8c4ff">
-                <a>On this day</a>
-            </div>
-            <a>
-                <img id="image" src="./assets/sub.jpg.webp" alt="Image of Maungwudaus">
-            </a>
-            <ul>
-                <li>AD 81 – Domitian, the last Flavian emperor of Rome, was confirmed by the Senate to succeed his brother Titus.</li>
-                <li>1901 – Theodore Roosevelt became President of the United States at age 42, the youngest person ever to do so, eight days after William McKinley was fatally wounded in Buffalo, New York.</li>
-                <li>1914 – HMAS AE1 (pictured), the Royal Australian Navy's first submarine, was lost at sea; its wreck was not found until 2017.</li>
-                <li>2019 – Drone attacks on major processing facilities at Abqaiq and Khurais forced Saudi Arabia to cut more than half of its oil production.</li>
-            </ul>
         </div>
     </div>
 </div>

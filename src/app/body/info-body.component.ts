@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
-import { BodyCardComponent } from "./Body-card.component";
+import { BodyModelComponent } from "./Body-card.model"
 import { mock_card } from "./mock_card";
+import { mock_card2 } from "./mock_card2"; 
 
 @Component({
     selector: 'info-body', 
@@ -8,11 +9,14 @@ import { mock_card } from "./mock_card";
 })
 
 export class InfoBodyComponent {
-    BodyCards:BodyCardComponent[] = []; 
+    BodyCards:BodyModelComponent[] = []; 
 
     constructor(){
         for (var charType of mock_card){
-            this.BodyCards.push(new BodyCardComponent(charType));
+            this.BodyCards.push(new BodyModelComponent(charType));
+        }
+        for (var BodyCard2 of mock_card2){
+            this.BodyCards.push(new BodyModelComponent(BodyCard2));
         }
     }
 }
