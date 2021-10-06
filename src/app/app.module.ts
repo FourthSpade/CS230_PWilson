@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppComponent } from './app.component';
 import { BodyComponent } from './body/body.component';
 import { InfoBodyComponent } from './body/info-body.component';
@@ -14,6 +13,8 @@ import { HomeHistory } from './body/Home-History.component';
 import { Talk } from './body/Talk-Read.component';
 import { TalkSource } from './body/Talk-source.component';
 import { BodyCardComponent } from './body/Body-card.component';
+import { UserInfoComponent } from './header/user-info.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -29,10 +30,12 @@ import { BodyCardComponent } from './body/Body-card.component';
     Talk,
     TalkSource,
     BodyCardComponent, 
+    UserInfoComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
