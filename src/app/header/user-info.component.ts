@@ -1,6 +1,8 @@
 import { HttpClient } from "@angular/common/http"; 
 import { Component, Injectable, OnInit } from "@angular/core";
 import { UserInfo } from "./user-info.model"; 
+import {userInfoService } from "./user-info.service"; 
+
 
 @Injectable()
 @Component({
@@ -9,22 +11,16 @@ import { UserInfo } from "./user-info.model";
 })
 export class UserInfoComponent implements OnInit {
     myInfo: UserInfo | undefined; 
-    constructor(private http: HttpClient) {
-
+    constructor(private infoService: userInfoService) {
     }
+
     ngOnInit(): void {
-        console.log("Sending get request to server."); 
-        this.getUserInfo(); 
         console.log("registeringshowUserInfo as a subscriber"); 
         this.showUserInfo(); 
     }
 
-    getUserInfo() {
-        return this.http.get<UserInfo>('https://wikipedia-app-c615e-default-rtdb.firebaseio.com/my-info.json');
-    }
-
     showUserInfo(){
-        this.getUserInfo().subscribe((data: UserInfo) => {
+        this.infoService.getUserInfo().subscribe((data: UserInfo) => {
             console.log(data); 
             this.myInfo = data; 
         })
