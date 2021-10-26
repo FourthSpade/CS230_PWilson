@@ -12,7 +12,7 @@
                 <a class="nav-link" href="#">Create Account</a>
             </li> 
             <li class="nav-item">
-                <a class="nav-link" href="#">Log in</a>
+                <a class="nav-link" data-bs-toggle="modal" data-bs-target="#ModalForm">Log in</a>
             </li>
         </ul>  
     </nav>
@@ -49,3 +49,72 @@
         </div>
     </div>
 </div>
+
+<!-- Modal Form -->
+<div class="modal fade" id="ModalForm" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+          <!-- Login Form -->
+          <form #postForm="ngForm" (ngSubmit)="onUpdateUserInfo(postForm.value)">
+            <div class="modal-header">
+              <h5 class="modal-title">Login</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <label for="firstname">First Name<span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" ngmodel name="FirstName">
+                </div>
+                  <div class="mb-3">
+                      <label for="lastname">Last Name<span class="text-danger">*</span></label>
+                      <input type="text" class="form-control"ngModel name="LastName">
+                  </div>
+                  <div class="mb-3">
+                      <label for="Mix_ID">Mix ID<span class="text-danger">*</span></label>
+                      <input type="text"class="form-control" ngModel name="Mix_ID" >
+                  </div>
+            </div>
+            <div class="modal-footer pt-4">                  
+              <button type="submit" class="btn btn-success mx-auto w-100">Login</button>
+            </div>
+            <p class="text-center">No account? <a href="#" data-bs-toggle="modal" data-bs-target="#ModalForm2">Create Account</a></p> 
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Form -->
+<div class="modal fade" id="ModalForm2" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+          <!-- Login Form -->
+          <form #postForm="ngForm" (ngSubmit)="onCreateUserInfo(postForm.value)">
+            <div class="modal-header">
+              <h5 class="modal-title">Create Account</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <label for="firstname">First Name<span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" ngmodel name="FirstName">
+                </div>
+                  <div class="mb-3">
+                      <label for="lastname">Last Name<span class="text-danger">*</span></label>
+                      <input type="text" class="form-control"ngModel name="LastName">
+                  </div>
+                  <div class="mb-3">
+                      <label for="Mix_ID">Mix ID<span class="text-danger">*</span></label>
+                      <input type="text" class="form-control" ngModel name="Mix_ID" >
+                  </div>
+                  <div class="mb-3">
+                    <label for="GitHub">GitHub<span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" ngModel name="GitHub" >
+                  </div>
+            </div>
+            <div class="modal-footer pt-4">                  
+              <button type="submit" class="btn btn-success mx-auto w-100">Create Account</button>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>

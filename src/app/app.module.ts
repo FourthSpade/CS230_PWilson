@@ -15,6 +15,9 @@ import { TalkSource } from './body/Talk-source.component';
 import { BodyCardComponent } from './body/Body-card.component';
 import { UserInfoComponent } from './header/user-info.component';
 import { HttpClientModule } from '@angular/common/http';
+import { EditUserInfoComponenet } from './header/edit-user-info.componenet';
+import { FormsModule } from '@angular/forms';
+import { userInfoService } from './header/user-info.service';
 
 @NgModule({
   declarations: [
@@ -31,11 +34,13 @@ import { HttpClientModule } from '@angular/common/http';
     TalkSource,
     BodyCardComponent, 
     UserInfoComponent,
+    EditUserInfoComponenet,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

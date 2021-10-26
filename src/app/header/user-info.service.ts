@@ -9,7 +9,20 @@ export class userInfoService {
     }
 
     getUserInfo() {
+        console.log(this.url); 
         return this.http.get<UserInfo>(this.url);
     }
 
+    modifyUserInfo(data:UserInfo) {
+        return this.http.put(this.url, data); 
+    }
+
+    createNewUser(data:UserInfo) {
+        return this.http.post(this.url, data); 
+    }
+
  }
+function data(url: string, data: any) {
+    throw new Error("Function not implemented.");
+}
+

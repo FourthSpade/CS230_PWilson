@@ -5,6 +5,7 @@ import { HomeHistory } from './body/Home-History.component';
 import { HomeSource } from './body/Home-source.component';
 import { Talk } from './body/Talk-Read.component';
 import { TalkSource } from './body/Talk-source.component';
+import { LoginComponent } from './header/login.component';
 
 const routes: Routes = [
   { path: 'Home', component: BodyComponent },
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'Home-history', component: HomeHistory },
   { path: 'Talk', component: Talk },
   { path: 'TalkSource', component: TalkSource },
+  { path: 'Login', component: LoginComponent }, 
 ];
 
 @NgModule({
