@@ -1,4 +1,5 @@
 import { Component } from "@angular/core"
+import { databaseService } from "../body/database.service";
 import { UserInfo } from "./user-info.model"; 
 import { userInfoService } from "./user-info.service"
 
@@ -9,7 +10,8 @@ import { userInfoService } from "./user-info.service"
     templateUrl: "edit-user-info.component.html"
 })
 export class EditUserInfoComponenet{
-    constructor(private infoService:userInfoService){
+    constructor(private infoService:userInfoService , private dbService:databaseService){
+        dbService.showData(); 
 
     }
 
