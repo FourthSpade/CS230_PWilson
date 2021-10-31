@@ -18,6 +18,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { EditUserInfoComponenet } from './header/edit-user-info.componenet';
 import { FormsModule } from '@angular/forms';
 import { userInfoService } from './header/user-info.service';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideDatabase,getDatabase } from '@angular/fire/database';
 
 @NgModule({
   declarations: [
@@ -41,6 +44,8 @@ import { userInfoService } from './header/user-info.service';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideDatabase(() => getDatabase()),
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "wikipedia-app-c615e": {
+      "hosting": {
+        "Wikiedia": [
+          "wikipedia-app-c615e"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "wikipedia-app-c615e"
+  }
+}

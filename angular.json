@@ -106,6 +106,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "Wikiedia:build:production",
+            "firebaseProject": "wikipedia-app-c615e",
+            "firebaseHostingSite": "wikipedia-app-c615e"
+          }
         }
       }
     }
