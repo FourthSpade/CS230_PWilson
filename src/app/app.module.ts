@@ -22,6 +22,7 @@ import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideDatabase,getDatabase } from '@angular/fire/database';
 import { AngularFireModule } from '@angular/fire/compat';
+import { AuthComponent } from './Auth/auth.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { AngularFireModule } from '@angular/fire/compat';
     BodyCardComponent, 
     UserInfoComponent,
     EditUserInfoComponenet,
+    AuthComponent,
   ],
   imports: [
     BrowserModule,
